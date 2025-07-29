@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras (Alura)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas Seguras</h1>
+
+        <div class="controles">
+            <label>
+                <input type="checkbox" id="incluirMaiusculas" checked>
+                Incluir Maiúsculas (A-Z)
+            </label>
+            <label>
+                <input type="checkbox" id="incluirMinusculas" checked>
+                Incluir Minúsculas (a-z)
+            </label>
+            <label>
+                <input type="checkbox" id="incluirNumeros" checked>
+                Incluir Números (0-9)
+            </label>
+            <label>
+                <input type="checkbox" id="incluirSimbolos" checked>
+                Incluir Símbolos (!@#$...)
+            </label>
+
+            <div class="tamanho-senha-container">
+                <label for="tamanhoSenhaInput">Tamanho da Senha: <span id="tamanhoSenhaValor">12</span></label>
+                <input type="range" id="tamanhoSenhaInput" min="4" max="32" value="12">
+            </div>
+        </div>
+
+        <button id="gerarSenhaBtn">Gerar Senha</button>
+
+        <p class="label-output">Sua Senha Gerada:</p>
+        <p class="resultado-senha" id="resultadoSenha"></p>
+
+        <p class="label-output">Entropia da Senha:</p>
+        <p class="valor-entropia" id="valorEntropia"></p>
+
+        <p class="label-output">Força da Senha:</p>
+        <p class="forca-senha" id="forcaSenha"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
